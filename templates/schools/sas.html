@@ -1,4 +1,9 @@
 {%extends "template.html"%}
+{%block style%}
+  body {
+      background: url({{url_for('static',filename='img/SAS_red.png')}}) repeat;
+  }
+{%endblock%}
 {%block content%}
-<h1>Hello from sas</h1>
+  <h1>Hello from sas</h1>
 {%endblock%}
