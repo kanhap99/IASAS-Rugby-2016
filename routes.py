@@ -5,15 +5,21 @@ app = Flask(__name__);
 
 @app.route('/')
 def home():
-    return render_template('home.html')
-@app.route('/teams/<school>')
-def dispTeam(school):
-    return render_template(school+'.html')
+    return render_template('index.html')
+@app.route('/teams/<schoolName>')
+def dispTeam(schoolName):
+    return render_template('schools/'+schoolName+'.html')
 @app.route('/schedule')
 def dispSchedule():
     return render_template('schedule.html')
-@app.route('/results/<resultGender>')
-def dispResults(resultGender):
-    return render_template(resultGender+'Results.html')
+@app.route('/results/<gender>')
+def dispResults(gender):
+    return render_template('results/'+gender+'Results.html')
+@app.route('/pics/<gender>')
+def dispPics(gender):
+    return render_template('pics/'+gender+'Pics.html')
+@app.route('/stream/<gender>')
+def dispStream(gender):
+    return render_template('stream/'+gender+'Stream.html')
 if __name__ == '__main__':
     app.run()
