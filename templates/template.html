@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <!--Optional styling for each page-->
     <style>
       {%block style%}
       {%endblock%}
@@ -104,7 +106,9 @@
         <!-- /.container -->
     </nav>
     <!--content-->
-    <div class="container" style="padding-top:50px;">
+    {%block header%}
+    {%endblock%}
+    <div class="content container">
       {%block content%}
       {%endblock%}
     </div>
@@ -120,7 +124,7 @@
           </div>
       </footer>
     </div>
-
+    <!--Javascript-->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
