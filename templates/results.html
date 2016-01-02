@@ -1,7 +1,10 @@
 {%extends "template.html"%}
 {%block style%}
   body {
-      background: url({{url_for('static',filename='img/bg-colors/JIS_blue.png')}}) repeat;
+      background: url({{url_for('static',filename='img/bg-colors/results_purple.png')}}) repeat;
+  }
+  .container{
+    padding-left:5px;
   }
   .cell {
         width: 10%;
@@ -37,15 +40,11 @@
     </script>
 {%endblock%}
 {%block content%}
-<h2>Boys results</h1>
-
-  <div class="container">
   <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding-left:50px;">
           <h1 class="page-header">Team Results Table</h1>
       </div>
   </div>
-</div><!-- /.container -->
 <div class="container">
   <div class="row">
       <div class="col-lg-12">
@@ -151,7 +150,7 @@
               </div>
           </div>
           <div class="tab-pane fade" id="Girls">
-              <div class="" style="padding-right:0px">
+              <div class="col-lg-12">
                   <div class="table-responsive" id="Girls-Results">
                       <table style="width: 100%;" class="text-center">
                           <tr>
@@ -245,8 +244,7 @@
       </div>
   </div>
 </div><!-- /.container -->
-
 {%endblock%}
-{%block spreadsheet%}
+{%block spreadsheetScript%}
   <script src="https://spreadsheets.google.com/feeds/cells/1-Mp1dtch4LWe4iWjdC_hxugAIPtCbpUaDVKSQzOHPb0/1/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
 {%endblock%}

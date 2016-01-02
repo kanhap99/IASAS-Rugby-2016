@@ -12,14 +12,15 @@ def dispTeam(schoolName):
 @app.route('/schedule')
 def dispSchedule():
     return render_template('schedule.html')
-@app.route('/results/<gender>')
-def dispResults(gender):
-    return render_template('results/'+gender+'Results.html')
+@app.route('/results')
+def dispResults():
+    return render_template('results.html')
 @app.route('/pics/<gender>')
 def dispPics(gender):
     return render_template('pics/'+gender+'Pics.html')
 @app.route('/stream/<gender>')
 def dispStream(gender):
     return render_template('stream/'+gender+'Stream.html')
+
 if __name__ == '__main__':
     app.run()
