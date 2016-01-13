@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/modern-business.css')}}">
     <link rel="icon" sizes="128x128" href="{{url_for('static',filename='img/logos/favicon.ico')}}">
     <!--Optional styling for each page-->
+
+
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
     <style>
       {%block style%}
       {%endblock%}
@@ -124,8 +128,7 @@
     <!--Javascript-->
     <!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
     <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
     {%block spreadsheetScript%}
     {%endblock%}
   </body>
