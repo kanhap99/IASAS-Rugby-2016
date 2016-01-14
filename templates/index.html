@@ -6,7 +6,6 @@
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
-              <li data-target="#myCarousel" data-slide-to="3"></li>
           </ol>
 
           <!-- Wrapper for slides -->
@@ -17,9 +16,7 @@
               <div class="item">
                   <div class="fill" style="background-image:url('{{url_for('static', filename='img/photos/front-fountain.jpg')}}');"></div>
               </div>
-              <div class="item">
-                  <div class="fill" style="background-image:url('{{url_for('static', filename='img/logos/rugby-logo.jpg')}}');"></div>
-              </div>
+
               <div class="item">
                   <div class="fill" style="background-image:url('{{url_for('static', filename='img/photos/JISField.jpg')}}');"></div>
               </div>
@@ -37,6 +34,9 @@
 {%block content%}
       <h1>Welcome to the IASAS Rugby Tournament 2016</h1>
       <hr>
+      <p>
+        <img src="{{url_for('static', filename='img/logos/rugby-logo.jpg')}}" alt="poster"/>
+      </p>
       <script>
         $('.carousel').carousel({
             interval: 5000 //changes the speed
