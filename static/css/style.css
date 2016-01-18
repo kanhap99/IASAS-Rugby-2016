@@ -12,3 +12,10 @@
 a,a:hover,a:visited{
   text-decoration: none !important;
 }
+.carousel {
+width:100%;
+margin:0 auto; /* center your carousel if other than 100% */
+}
+.fill{
+  height: 400px;
+}
