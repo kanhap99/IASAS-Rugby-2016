@@ -15,12 +15,12 @@ def dispSchedule():
 @app.route('/results')
 def dispResults():
     return render_template('results.html')
-@app.route('/pics/<gender>')
+@app.route('/pics')
 def dispPics(gender):
-    return render_template('pics/'+gender+'Pics.html')
-@app.route('/stream/<gender>')
+    return render_template('pics.html')
+@app.route('/stream')
 def dispStream(gender):
-    return render_template('stream/'+gender+'Stream.html')
+    return render_template('stream.html')
 
 if __name__ == '__main__':
     app.run()
