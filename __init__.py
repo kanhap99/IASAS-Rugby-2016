@@ -16,10 +16,10 @@ def dispSchedule():
 def dispResults():
     return render_template('results.html')
 @app.route('/pics')
-def dispPics(gender):
+def dispPics():
     return render_template('pics.html')
 @app.route('/stream')
-def dispStream(gender):
+def dispStream():
     return render_template('stream.html')
 
 if __name__ == '__main__':
