@@ -1,4 +1,19 @@
 {%extends "template.html"%}
+{%block style%}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+    .carousel{
+      height:1000px;
+    }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+  .carousel{
+    height:500px;
+  }
+ }
+{%endblock%}
 {%block header%}
       <header id="myCarousel" class="carousel slide">
           <!-- Indicators -->
